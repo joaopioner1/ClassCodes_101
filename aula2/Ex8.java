@@ -16,7 +16,7 @@ public class Ex8 {
 		double avg = (n1 + n2) / 2;
 
 		System.out.printf("Average: %.2f", avg);
-
+		
 		in.close();
 	}
 
