@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Ex4 {
 
 	public static void main(String[] args) {
+		// Autor: Joao Vitor Souza Pioner | Data: 26/10/2020
 		Scanner in = new Scanner(System.in);
 
 		System.out.print("Enter one number: ");
