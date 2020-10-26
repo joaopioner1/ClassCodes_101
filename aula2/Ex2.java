@@ -9,9 +9,9 @@ public class Ex2 {
 
 		System.out.print("Enter one number: ");
 		int number = in.nextInt();
-		
+
 		System.out.println("The number multiplied by 2 is: " + number * 2);
-		
+
 		in.close();
 	}
 
