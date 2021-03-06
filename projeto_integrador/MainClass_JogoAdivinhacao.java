@@ -17,7 +17,9 @@ public class MainClass_JogoAdivinhacao {
 		 * Aproveite a jogatina!
 		 */
 		
+		VerificaRespotas vf = new VerificaRespotas();
 		
+		vf.verificaRespostas();
 		
 	}
 }
