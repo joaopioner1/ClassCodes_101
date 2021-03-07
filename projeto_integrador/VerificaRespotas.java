@@ -141,17 +141,31 @@ public class VerificaRespotas {
 		}
 	}
 	
-	/*public void hardwaresAuxiliares() {
+	public void hardwaresAuxiliares() { // - Ele resfria o hardware? Ele é uma espécie de ventilador?	É importante limpa-lo?
 		System.out.println("Este aparelho resfria o hardware (s/n)?");
 		this.setResposta(input.next().charAt(0));
 		
-		if () {
+		if (this.getResposta() == 's') {
+			System.out.println("É uma espécie de ventilador (s/n)?");
+			this.setResposta(input.next().charAt(0));
 			
+			if (this.getResposta() == 's') {
+				System.out.println("É importante limpa-lo (s/n)?");
+				this.setResposta(input.next().charAt(0));
+				
+				if (this.getResposta() == 's') {
+					System.out.println("É o COOLER! Deseja continuar jogando (s/n)?");
+					this.setContinuar(input.next().charAt(0));
+				}
+			}
+		} else {
+			System.out.println("A função ");
 		}
-	}*/
+	}
 
 	public void verificaRespostas() {
 		do {
+			
 			this.verificaPeriferico();
 			this.verificaMemoria();
 			
