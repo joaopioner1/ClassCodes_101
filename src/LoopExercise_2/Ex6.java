@@ -8,7 +8,10 @@ public class Ex6 {
 		// Author: João Vítor Souza Pioner | Date: 14/06/2021
 		Scanner sc = new Scanner(System.in);
 		
-		Integer answer = 0;
+		Integer answer = 0, quantityProduct = 0;
+		Integer q_banana, q_morango;
+		
+		Double valueProduct = 0.0;
 		System.out.println(showInfo());
 		do {
 			System.out.print("\nInsira um código: ");
@@ -16,8 +19,20 @@ public class Ex6 {
 			verfCode(answer);
 			switch (answer) {
 			case 0 :
+				System.out.println("GOODBYE!");
+				break;
+			case 1 : 
+				System.out.print("\nInsira o código do produto: ");
+				Integer productCode = sc.nextInt();
+				switch (productCode) {
+				case 101 :
+					System.out.println("BANANA! Quantidade do produto: ");
+					quantityProduct = sc.nextInt();
+					valueProduct = quantityProduct * 0.20;
+					break;
+				}
+			case 3 :
 				
-			
 			}
 		} 
 		while (answer != 0);
@@ -33,10 +48,10 @@ public class Ex6 {
 		sb.append("\n2 - Quantidade vendido no dia por produto em REAIS");
 		sb.append("\n3 - Quantidade vendido no dia por produto em UNIDADES");
 		sb.append("\n\n---CODIGOS DOS PRODUTOS---");
-		sb.append("\nCelular -    101 | R$ 950.00");
-		sb.append("\nTV -         201 | R$ 1800.00");
-		sb.append("\nVideo Game - 301 | R$ 2500.00");
-		sb.append("\nTablet -     401 | R$ 1200.00");
+		sb.append("\nBanana   - 101 | UNI R$ 0.20");
+		sb.append("\nXuxu     - 201 | UNI R$ 0.50");
+		sb.append("\nAbacate  - 301 | UNI R$ 1.50");
+		sb.append("\nTMorango - 401 | UNI R$ 0.15");
 		return sb.toString();
 	}
 	
