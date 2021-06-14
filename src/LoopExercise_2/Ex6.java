@@ -8,13 +8,15 @@ public class Ex6 {
 		// Author: João Vítor Souza Pioner | Date: 14/06/2021
 		Scanner sc = new Scanner(System.in);
 		
-		short answer = 0;
+		Integer answer = 0;
 		System.out.println(showInfo());
 		do {
 			System.out.print("\nInsira um código: ");
-			Integer code = sc.nextInt();
-			verfCode(code);
-			switch () {
+			answer = sc.nextInt();
+			verfCode(answer);
+			switch (answer) {
+			case 0 :
+				
 			
 			}
 		} 
