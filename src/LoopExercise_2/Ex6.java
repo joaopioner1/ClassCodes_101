@@ -33,46 +33,44 @@ public class Ex6 {
 					System.out.println("BANANA! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.20;
-					q_banana += quantityProduct;
 					listValue.add(0, valueProduct);
-					break;
+					listQuantity.add(0, quantityProduct);
+					continue;
 				case 201 :
 					System.out.println("XUXU! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.50;
-					q_xuxu += quantityProduct;
 					listValue.add(1, valueProduct);
-					
-					break;
+					listQuantity.add(1, quantityProduct);
+					continue;
 				case 301 :
 					System.out.println("ABACATE! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 1.50;
-					q_abacate += quantityProduct;
 					listValue.add(2, valueProduct);
-
-					break;
+					listQuantity.add(2, quantityProduct);
+					continue;
 				case 401 :
 					System.out.println("MORANGO! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.15;
 					listValue.add(3, valueProduct);
-					
-					break;
+					listQuantity.add(3, quantityProduct);
+					continue;
 				}
 			case 3 :
-				System.out.println("Quantidade de bananas vendidas : " + q_banana);
-				System.out.println("Quantidade de abacates vendidos: " + q_abacate);
-				System.out.println("Quantidade de morangos vendidos: " + q_morango);
-				System.out.println("Quantidade de xuxus vendidos   : " + q_xuxu);
+				System.out.println("\nQuantidade de bananas vendidas : " + listQuantity.get(0));
+				System.out.println("Quantidade de xuxus vendidos: " + listQuantity.get(1));
+				System.out.println("Quantidade de abacates vendidos: " + listQuantity.get(2));
+				System.out.println("Quantidade de morangos vendidos   : " + listQuantity.get(3));
 				System.out.println("\nQuantidade total de produtos vendindos: " + quantityProduct);
 				break;
 			case 4 :
-				System.out.println("Total R$ de bananas vendidas : " + q_banana);
-				System.out.println("Total R$ de abacates vendidos: " + q_abacate);
-				System.out.println("Total R$ de morangos vendidos: " + q_morango);
-				System.out.println("Total R$ de xuxus vendidos   : " + q_xuxu);
-				System.out.println("\nQuantidade total de produtos vendindos: " + quantityProduct);
+				System.out.printf("\nTotal R$ de bananas vendidas : %.2f", listValue.get(0));
+				System.out.println("Total R$ de xuxus vendidos: " + listValue.get(1));
+				System.out.println("Total R$ de abacates vendidos: " + listValue.get(2));
+				System.out.println("Total R$ de morangos vendidos   : " + listValue.get(3));
+				System.out.println("\nTotal R$ de produtos vendindos: " + valueProduct);
 				break;
 			}
 		} 
@@ -101,4 +99,8 @@ public class Ex6 {
 			throw new InvalidNumberEntered("Voce precisa digitar inicialmente os codigos 0, 1, 2 ou 3");
 		}
 	}
+	/*
+	static String showQuantity(List<Integer> list) {
+		
+	}*/
 }
