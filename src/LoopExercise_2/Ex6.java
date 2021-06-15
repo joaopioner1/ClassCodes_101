@@ -1,5 +1,7 @@
 package LoopExercise_2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ex6 {
@@ -8,8 +10,10 @@ public class Ex6 {
 		// Author: João Vítor Souza Pioner | Date: 14/06/2021
 		Scanner sc = new Scanner(System.in);
 		
+		List<Double> listValue = new ArrayList<>();
+		List<Integer> listQuantity = new ArrayList<>();
+		
 		Integer answer = 0, quantityProduct = 0;
-		Integer q_banana, q_morango;
 		
 		Double valueProduct = 0.0;
 		System.out.println(showInfo());
@@ -29,10 +33,47 @@ public class Ex6 {
 					System.out.println("BANANA! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.20;
+					q_banana += quantityProduct;
+					listValue.add(0, valueProduct);
+					break;
+				case 201 :
+					System.out.println("XUXU! Quantidade do produto: ");
+					quantityProduct = sc.nextInt();
+					valueProduct = quantityProduct * 0.50;
+					q_xuxu += quantityProduct;
+					listValue.add(1, valueProduct);
+					
+					break;
+				case 301 :
+					System.out.println("ABACATE! Quantidade do produto: ");
+					quantityProduct = sc.nextInt();
+					valueProduct = quantityProduct * 1.50;
+					q_abacate += quantityProduct;
+					listValue.add(2, valueProduct);
+
+					break;
+				case 401 :
+					System.out.println("MORANGO! Quantidade do produto: ");
+					quantityProduct = sc.nextInt();
+					valueProduct = quantityProduct * 0.15;
+					listValue.add(3, valueProduct);
+					
 					break;
 				}
 			case 3 :
-				
+				System.out.println("Quantidade de bananas vendidas : " + q_banana);
+				System.out.println("Quantidade de abacates vendidos: " + q_abacate);
+				System.out.println("Quantidade de morangos vendidos: " + q_morango);
+				System.out.println("Quantidade de xuxus vendidos   : " + q_xuxu);
+				System.out.println("\nQuantidade total de produtos vendindos: " + quantityProduct);
+				break;
+			case 4 :
+				System.out.println("Total R$ de bananas vendidas : " + q_banana);
+				System.out.println("Total R$ de abacates vendidos: " + q_abacate);
+				System.out.println("Total R$ de morangos vendidos: " + q_morango);
+				System.out.println("Total R$ de xuxus vendidos   : " + q_xuxu);
+				System.out.println("\nQuantidade total de produtos vendindos: " + quantityProduct);
+				break;
 			}
 		} 
 		while (answer != 0);
@@ -55,7 +96,7 @@ public class Ex6 {
 		return sb.toString();
 	}
 	
-	static void verfCode (Integer code) {
+	static void verfCode(Integer code) {
 		if (code != 0 && code != 1 && code != 2 && code != 3) {
 			throw new InvalidNumberEntered("Voce precisa digitar inicialmente os codigos 0, 1, 2 ou 3");
 		}
