@@ -58,14 +58,14 @@ public class Ex6 {
 					listQuantity.add(3, quantityProduct);
 					continue;
 				}
-			case 3 :
+			case 2 :
 				System.out.println("\nQuantidade de bananas vendidas : " + listQuantity.get(0));
 				System.out.println("Quantidade de xuxus vendidos: " + listQuantity.get(1));
 				System.out.println("Quantidade de abacates vendidos: " + listQuantity.get(2));
 				System.out.println("Quantidade de morangos vendidos   : " + listQuantity.get(3));
 				System.out.println("\nQuantidade total de produtos vendindos: " + quantityProduct);
 				break;
-			case 4 :
+			case 3 :
 				System.out.printf("\nTotal R$ de bananas vendidas : %.2f", listValue.get(0));
 				System.out.println("Total R$ de xuxus vendidos: " + listValue.get(1));
 				System.out.println("Total R$ de abacates vendidos: " + listValue.get(2));
@@ -79,8 +79,9 @@ public class Ex6 {
 		sc.close();
 	}
 	
+	static StringBuilder sb = new StringBuilder();
+	
 	static String showInfo() {
-		StringBuilder sb = new StringBuilder();
 		sb.append("#MENU#");
 		sb.append("\n0 - sair");
 		sb.append("\n1 - vender produto");
@@ -99,8 +100,9 @@ public class Ex6 {
 			throw new InvalidNumberEntered("Voce precisa digitar inicialmente os codigos 0, 1, 2 ou 3");
 		}
 	}
-	/*
+	
 	static String showQuantity(List<Integer> list) {
-		
-	}*/
+		sb.append("testeeee");
+		return sb.toString();
+	}
 }
