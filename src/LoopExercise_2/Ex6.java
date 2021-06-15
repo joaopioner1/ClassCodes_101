@@ -30,28 +30,28 @@ public class Ex6 {
 				Integer productCode = sc.nextInt();
 				switch (productCode) {
 				case 101 :
-					System.out.println("BANANA! Quantidade do produto: ");
+					System.out.print("BANANA! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.20;
 					listValue.add(0, valueProduct);
 					listQuantity.add(0, quantityProduct);
 					continue;
 				case 201 :
-					System.out.println("XUXU! Quantidade do produto: ");
+					System.out.print("XUXU! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.50;
 					listValue.add(1, valueProduct);
 					listQuantity.add(1, quantityProduct);
 					continue;
 				case 301 :
-					System.out.println("ABACATE! Quantidade do produto: ");
+					System.out.print("ABACATE! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 1.50;
 					listValue.add(2, valueProduct);
 					listQuantity.add(2, quantityProduct);
 					continue;
 				case 401 :
-					System.out.println("MORANGO! Quantidade do produto: ");
+					System.out.print("MORANGO! Quantidade do produto: ");
 					quantityProduct = sc.nextInt();
 					valueProduct = quantityProduct * 0.15;
 					listValue.add(3, valueProduct);
@@ -59,11 +59,9 @@ public class Ex6 {
 					continue;
 				}
 			case 2 :
-				System.out.println("\nQuantidade de bananas vendidas : " + listQuantity.get(0));
-				System.out.println("Quantidade de xuxus vendidos: " + listQuantity.get(1));
-				System.out.println("Quantidade de abacates vendidos: " + listQuantity.get(2));
-				System.out.println("Quantidade de morangos vendidos   : " + listQuantity.get(3));
-				System.out.println("\nQuantidade total de produtos vendindos: " + quantityProduct);
+				for (int i = 0; i <= listQuantity.size(); i++) {
+					System.out.println(showQuantity(listQuantity, i));
+				}
 				break;
 			case 3 :
 				System.out.printf("\nTotal R$ de bananas vendidas : %.2f", listValue.get(0));
@@ -101,8 +99,19 @@ public class Ex6 {
 		}
 	}
 	
-	static String showQuantity(List<Integer> list) {
-		sb.append("testeeee");
-		return sb.toString();
+	static String showQuantity(List<Integer> list, int i) {
+		if (list.get(0) != null) {
+			return "\nQuantidade de bananas vendidas : " + list.get(i);
+		} 
+		if (list.get(1) != null) {
+			return "\nQuantidade de xuxus vendidos: " + list.get(i);
+		} 
+		if (list.get(2) != null) {
+			return "\nQuantidade de abacates vendidos: " + list.get(i);
+		} 
+		if (list.get(3) != null) {
+			return "\nQuantidade de morangos vendidos: " + list.get(i);
+		} 
+		return null;
 	}
 }
