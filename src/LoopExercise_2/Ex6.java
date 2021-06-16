@@ -10,7 +10,7 @@ public class Ex6 {
 		Scanner sc = new Scanner(System.in);
 		
 		Integer q_xuxus=0, q_abacates=0, q_banana=0, q_morangos=0;
-		Integer answer = 5;
+		Integer answer = 5, count = 0;
 		
 		Double[] prices = new Double[4];
 		Double valueProduct = 0.0;
@@ -29,31 +29,39 @@ public class Ex6 {
 					switch (productCode) {
 					case 101 :
 						System.out.print("BANANA! Quantidade do produto: ");
-						q_banana += q_banana;
 						q_banana = sc.nextInt();
-						valueProduct = q_banana * 0.20;
-						prices[0] = valueProduct;
+						if (verfGreatThanZero(count)) {
+							q_banana += q_banana;
+							valueProduct = q_banana * 0.20;
+							prices[0] = valueProduct;
+						}
 						break;
 					case 201 :
 						System.out.print("XUXU! Quantidade do produto: ");
-						q_xuxus += q_xuxus;
 						q_xuxus = sc.nextInt();
-						valueProduct = q_xuxus * 0.50;
-						prices[1] = valueProduct;
+						if (verfGreatThanZero(count)) {
+							q_xuxus += q_xuxus;
+							valueProduct = q_xuxus * 0.50;
+							prices[1] = valueProduct;
+						}
 						break;
 					case 301 :
 						System.out.print("ABACATE! Quantidade do produto: ");
-						q_abacates += q_abacates;
 						q_abacates = sc.nextInt();
-						valueProduct = q_abacates * 1.50;
-						prices[2] = valueProduct;
+						if (verfGreatThanZero(count)) {
+							q_abacates += q_abacates;
+							valueProduct = q_abacates * 1.50;
+							prices[2] = valueProduct;
+						}
 						break;
 					case 401 :
 						System.out.print("MORANGO! Quantidade do produto: ");
-						q_morangos += q_morangos;
 						q_morangos = sc.nextInt();
-						valueProduct = q_morangos * 0.15;
-						prices[3] = valueProduct;
+						if (verfGreatThanZero(count)) {
+							q_morangos += q_morangos;
+							valueProduct = q_morangos * 0.15;
+							prices[3] = valueProduct;
+						}
 						break;
 						}
 					}
@@ -69,6 +77,7 @@ public class Ex6 {
 					System.out.printf("\nTotal R$ de abacates vendidos   : %.2f", prices[2]);
 					System.out.printf("\nTotal R$ de morangos vendidos   : %.2f\n-------", prices[3]);
 				}
+				count++;
 			} while (answer != 0);
 		} 
 		catch (NullPointerException e) {
@@ -101,5 +110,12 @@ public class Ex6 {
 		if (code != 0 && code != 1 && code != 2 && code != 3) {
 			throw new InvalidNumberEntered("Voce precisa digitar inicialmente os codigos 0, 1, 2 ou 3");
 		}
+	}
+	
+	static boolean verfGreatThanZero(int number) {
+		if (number > 0) {
+			return true;
+		} 
+		return false;
 	}
 }
