@@ -9,7 +9,6 @@ public class Ex3 {
 		Scanner in = new Scanner(System.in);
 		
 		Integer[] A = new Integer[20];
-		Integer[] aux = new Integer[20];
 
 		for (int i = 0; i < A.length; i++) {
 			A[i] = 10;
@@ -26,8 +25,8 @@ public class Ex3 {
 
 /*
 
-Preencher um array A de 20 elementos (índices de 0 a 19) com os números inteiros 10,20,30,40,50,...,200. 
-Escrever o array A após o seu total preenchimento. Observe que existe uma relação entre o índice e o valor 
-armazenado na posição do array.
+Preencher um array A de 20 elementos (Ã­ndices de 0 a 19) com os nÃºmeros inteiros 10,20,30,40,50,...,200. 
+Escrever o array A apÃ³s o seu total preenchimento. Observe que existe uma relaÃ§Ã£o entre o Ã­ndice e o valor 
+armazenado na posiÃ§Ã£o do array.
 
 */
